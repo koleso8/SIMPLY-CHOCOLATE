@@ -9,26 +9,42 @@
             href="./icons/chocolate.svg"
             type="image/svg"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+            integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./css/styles.css" />
     </head>
     <body>
         <!-- #region HEADER -->
-        <header>
-            <nav>
-                <a href="./index.html"
-                    >SIMPLY CHOCOLATE
+        <header class="header">
+            <nav class="header-nav">
+                <a class="logo" href="./index.html"
+                    ><span class="span-logo">SIMPLY</span> CHOCOLATE
                     <img
                         src="/icons/chocolate.svg"
                         alt="logo"
                         width="24"
                         height="24"
                 /></a>
-                <ul>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="#">How it's made?</a></li>
-                    <li><a href="#">Chocolate is loved</a></li>
+                <ul class="header-list">
+                    <li class="header-item"><a href="/index.html">Home</a></li>
+                    <li class="header-item"><a href="#">How it's made?</a></li>
+                    <li class="header-item">
+                        <a href="#">Chocolate is loved</a>
+                    </li>
                 </ul>
-                <ul>
-                    <li>
+                <ul class="header-list">
+                    <li class="header-item">
                         <a
                             href="https://facebook.com"
                             target="_blank"
@@ -41,7 +57,7 @@
                                 height="24"
                         /></a>
                     </li>
-                    <li>
+                    <li class="header-item">
                         <a
                             href="https://instagram.com"
                             target="_blank"
@@ -54,7 +70,7 @@
                                 height="24"
                         /></a>
                     </li>
-                    <li>
+                    <li class="header-item">
                         <a
                             href="https://x.com/"
                             target="_blank"
@@ -73,26 +89,38 @@
         <!-- #endregion HEADER -->
         <main>
             <!-- #region HERO -->
-            <section>
-                <h1>
+            <section class="hero">
+                <h1 class="hero-title">
                     Treat yourself or a loved one to our finest ingredients for
                     a moment of pure delight!
                 </h1>
-                <ul>
-                    <li><button type="button">Buy now</button></li>
-                    <li><button type="button">How it's made</button></li>
+                <ul class="hero-list">
+                    <li class="hero-item">
+                        <button class="button btn-buy" type="button">
+                            Buy now
+                        </button>
+                    </li>
+                    <li class="hero-item">
+                        <button class="button btn-hw" type="button">
+                            How it's made
+                        </button>
+                    </li>
                 </ul>
-                <a href="#">scroll down</a>
-                <img src="/icons/arrow-down.svg" alt="arrow-down" />
+                <a class="hero-link" href="#">scroll down</a>
+                <img
+                    class="hero-link-icon"
+                    src="/icons/arrow-down.svg"
+                    alt="arrow-down"
+                />
             </section>
             <!-- #endregion HERO -->
             <!-- #region BENEFITS -->
-            <section>
-                <h2 hidden>Benefits</h2>
-                <ul>
-                    <li>
-                        <h3>Unsurpassed taste</h3>
-                        <p>
+            <section class="benefits">
+                <h2 class="visually-hidden">Benefits</h2>
+                <ul class="benefits-list">
+                    <li class="benefits-item">
+                        <h3 class="benefits-sub">Unsurpassed taste</h3>
+                        <p class="benefits-text">
                             Crafted with the finest quality cocoa beans and a
                             dedication to perfection, each bite is a decadent
                             experience that simply cannot be matched. Savor the
@@ -100,9 +128,9 @@
                             discover a new level of chocolate bliss.
                         </p>
                     </li>
-                    <li>
-                        <h3>Affordable price</h3>
-                        <p>
+                    <li class="benefits-item">
+                        <h3 class="benefits-sub">Affordable price</h3>
+                        <p class="benefits-text">
                             Indulge in high-quality chocolate without breaking
                             the bank with Simply Chocolate's selection of
                             affordable treats. Enjoy mouth-watering truffles and
@@ -111,9 +139,9 @@
                             affordable luxury today.
                         </p>
                     </li>
-                    <li>
-                        <h3>Own production</h3>
-                        <p>
+                    <li class="benefits-item">
+                        <h3 class="benefits-sub">Own production</h3>
+                        <p class="benefits-text">
                             We take pride in our own production process,
                             ensuring that every step is carefully crafted to
                             perfection. From selecting the finest ingredients to
@@ -125,78 +153,81 @@
             </section>
             <!-- #endregion BENEFITS -->
             <!-- #region INGRIDIENTS -->
-            <section>
-                <h2>It all adds up to one exceptional taste sensation</h2>
-                <ul>
-                    <li>
+            <section class="ingradients">
+                <h2 class="title">
+                    It all adds up to one exceptional
+                    <span class="orange">taste</span> sensation
+                </h2>
+                <ul class="ingradients-list">
+                    <li class="ingradients-item milk-chokolate">
                         <img
                             src="/images/ingradient/img-1.png"
                             alt="MILK CHOCOLATE"
                             width="214"
                             height="160"
                         />
-                        <h3>MILK CHOCOLATE</h3>
+                        <h3 class="ingradients-h">MILK CHOCOLATE</h3>
                     </li>
-                    <li>
+                    <li class="ingradients-item milk">
                         <img
                             src="/images/ingradient/img-2.png"
                             alt="MILK"
                             width="214"
                             height="160"
                         />
-                        <h3>MILK</h3>
+                        <h3 class="ingradients-h">MILK</h3>
                     </li>
-                    <li>
+                    <li class="ingradients-item nuts">
                         <img
                             src="/images/ingradient/img-3.png"
                             alt="NUTS"
                             width="214"
                             height="160"
                         />
-                        <h3>NUTS</h3>
+                        <h3 class="ingradients-h">NUTS</h3>
                     </li>
-                    <li>
+                    <li class="ingradients-item sweet-chocolate">
                         <img
                             src="/images/ingradient/img-4.png"
                             alt="SEMI - SWEET CHOCOLATE"
                             width="214"
                             height="160"
                         />
-                        <h3>SEMI - SWEET CHOCOLATE</h3>
+                        <h3 class="ingradients-h">SEMI - SWEET CHOCOLATE</h3>
                     </li>
-                    <li>
+                    <li class="ingradients-item cacao">
                         <img
                             src="/images/ingradient/img-5.png"
                             alt="CACAO"
                             width="214"
                             height="160"
                         />
-                        <h3>CACAO</h3>
+                        <h3 class="ingradients-h">CACAO</h3>
                     </li>
-                    <li>
+                    <li class="ingradients-item raspberry">
                         <img
                             src="/images/ingradient/img-6.png"
                             alt="RASPBERRY"
                             width="214"
                             height="160"
                         />
-                        <h3>RASPBERRY</h3>
+                        <h3 class="ingradients-h">RASPBERRY</h3>
                     </li>
-                    <li>
+                    <li class="ingradients-item coconut">
                         <img
                             src="/images/ingradient/img-7.png"
                             alt="COCONUT OIL"
                             width="214"
                             height="160"
                         />
-                        <h3>COCONUT OIL</h3>
+                        <h3 class="ingradients-h">COCONUT OIL</h3>
                     </li>
                 </ul>
             </section>
             <!-- #endregion INGRIDIENTS -->
             <!-- #region MAKE-->
             <section>
-                <h2>How it's made?</h2>
+                <h2 class="title">How it's made?</h2>
                 <img
                     src="/images/image.jpg"
                     alt="maker"
@@ -243,7 +274,7 @@
             </section>
             <!-- #endregion MAKE-->
             <!-- #region PRODUCT -->
-            <h2>Our products</h2>
+            <h2 class="title">Our products</h2>
             <ul>
                 <li>
                     <img
@@ -337,7 +368,7 @@
             <!-- #endregion PRODUCT -->
             <!-- #region TOP SELLERS -->
             <section>
-                <h2>Top sellers</h2>
+                <h2 class="title">Top sellers</h2>
                 <ul>
                     <li>
                         <img
@@ -371,7 +402,7 @@
             <!-- #endregion TOP SELLERS -->
             <!-- #region Chocolate is loved -->
             <section>
-                <h2>Chocolate is loved</h2>
+                <h2 class="title">Chocolate is loved</h2>
                 <ul>
                     <li>
                         <img src="/images/client/img-1.png" alt="victoria" />
