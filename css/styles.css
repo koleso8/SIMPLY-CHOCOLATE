@@ -1,4 +1,27 @@
 /* #region  BASE */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -27,26 +50,43 @@ a {
     text-decoration: none;
     font-family: inherit;
     color: currentColor;
+    margin: 0;
 }
 
 ol,
 ul {
     list-style: none;
+    margin: 0;
 }
 
 .orange {
     color: #fd9222;
 }
-
+.container {
+    display: flex;
+    background-color: beige;
+    justify-content: center;
+    width: 1200px;
+}
 /* #endregion BASE */
 
 /* #region Header */
+.header {
+    padding: 28px 32px;
+}
+.header .container {
+    justify-content: space-between;
+}
+
 .logo {
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.11;
     letter-spacing: -0.03em;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .span-logo {
@@ -54,14 +94,23 @@ ul {
 }
 
 .header-nav {
+    display: flex;
 }
 .header-list {
+    display: flex;
+    gap: 24px;
 }
 .header-item {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: -0.02em;
+    gap: 24px;
+}
+
+.add {
+    margin-left: auto;
+    justify-content: end;
 }
 /* #endregion Header */
 
