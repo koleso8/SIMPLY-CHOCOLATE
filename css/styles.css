@@ -57,6 +57,7 @@ ol,
 ul {
     list-style: none;
     margin: 0;
+    padding: 0;
 }
 
 .orange {
@@ -64,18 +65,22 @@ ul {
 }
 .container {
     display: flex;
-    background-color: beige;
+    /* background-color: beige; */
     justify-content: center;
-    width: 1200px;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 1168px;
 }
 /* #endregion BASE */
 
 /* #region Header */
 .header {
-    padding: 28px 32px;
+    padding: 20px 0;
 }
+
 .header .container {
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .logo {
@@ -87,6 +92,8 @@ ul {
     display: flex;
     align-items: center;
     gap: 4px;
+    margin-left: 0;
+    margin-right: 350px;
 }
 
 .span-logo {
@@ -99,6 +106,8 @@ ul {
 .header-list {
     display: flex;
     gap: 24px;
+    margin-right: 80px;
+    align-items: center;
 }
 .header-item {
     font-weight: 500;
@@ -108,24 +117,61 @@ ul {
     gap: 24px;
 }
 
-.add {
+.header-list-media {
+    display: flex;
+    gap: 24px;
     margin-left: auto;
-    justify-content: end;
+    margin-right: 0;
+}
+
+.header-item-media {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: -0.02em;
+    gap: 24px;
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    border-radius: 10px;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
 }
 /* #endregion Header */
 
 /* #region Hero */
+
 .hero {
-    background-color: rgba(17, 17, 17, 0.4);
+    padding: 0 16px 80px;
 }
+
+.hero .container {
+    background-color: rgba(17, 17, 17, 0.4);
+    padding: 381px 40px 40px 40px;
+    border-radius: 30px;
+    width: 1168px;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
 .hero-title {
     font-weight: 500;
     font-size: 28px;
     line-height: 1.21;
     letter-spacing: -0.03em;
     color: #fff;
+
+    max-width: 484px;
+    margin-bottom: 32px;
 }
+
+.butt {
+    display: flex;
+    flex-direction: row;
+}
+
 .hero-list {
+    display: flex;
+    gap: 14px;
 }
 .hero-item {
 }
@@ -137,6 +183,10 @@ ul {
 }
 .btn-buy {
     background-color: #fd9222;
+    border-radius: 100px;
+    padding: 14px 40px;
+    min-width: 144px;
+    border-color: transparent;
 }
 
 .btn-buy:hover,
@@ -146,11 +196,16 @@ ul {
 }
 .btn-hw {
     background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    padding: 14px 40px;
+    min-width: 183px;
 }
 
 .btn-hw:hover,
 .btn-hw:focus {
     color: #fd9222;
+    border-color: currentColor;
 }
 .hero-link {
     font-weight: 500;
@@ -158,28 +213,45 @@ ul {
     line-height: 1.28;
     letter-spacing: -0.03em;
     color: #fff;
+    display: flex;
+    margin-right: 0;
+    margin-left: auto;
+    align-items: center;
 }
 .hero-link:hover,
 .hero-link:focus {
     color: #fd9222;
 }
 .hero-link-icon {
+    display: block;
+    align-items: center;
+}
+
+.hero-link a {
+    margin-right: 14px;
 }
 /* #endregion Hero */
 
 /* #region Benefits */
 .benefits {
     background-color: #1e1823;
+    padding: 50px 50px;
 }
+
 .benefits-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 88px;
 }
 .benefits-item {
+    max-width: 308px;
 }
 .benefits-sub {
     font-weight: 600;
     font-size: 18px;
     line-height: 1.22;
     color: #fff;
+    margin-bottom: 18px;
 }
 .benefits-text {
     font-size: 14px;
@@ -191,6 +263,12 @@ ul {
 
 /* #region Ingradients */
 .ingradients {
+    padding: 0 60px 120px;
+}
+.ingradients .container {
+    padding-top: 120px;
+    flex-direction: column;
+    align-items: center;
     background-color: #fff;
 }
 .title {
@@ -201,10 +279,46 @@ ul {
     text-transform: uppercase;
     text-align: center;
     color: #111;
+    display: inline-block;
+    max-width: 412px;
+    margin-bottom: 50px;
 }
 .ingradients-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
 }
 .ingradients-item {
+    border-radius: 15px;
+    border: 1px solid #111;
+    width: 260px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 28px 23px;
+}
+
+.ingradients-item img {
+    margin-bottom: 36px;
+}
+
+.ingradients-item:nth-child(2n) {
+    background-color: #fff;
+    color: orange;
+    border-color: currentColor;
+}
+
+.ingradients-item:nth-child(4n + 1) {
+    background-color: orange;
+    border-color: orange;
+    color: #fff;
+}
+
+.ingradients-item:nth-child(4n + 3) {
+    background-color: #1e1823;
+    border-color: currentColor;
+    color: #fff;
 }
 
 .ingradients-h {
@@ -213,6 +327,6 @@ ul {
     line-height: 1.33;
     letter-spacing: -0.02em;
     text-transform: uppercase;
-    color: #111;
+    margin-right: auto;
 }
 /* #endregion Ingradients */
