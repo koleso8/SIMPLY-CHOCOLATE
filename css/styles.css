@@ -94,6 +94,8 @@ ul {
     gap: 4px;
     margin-left: 0;
     margin-right: 350px;
+    stroke: #fd9222;
+    fill: #fafafa;
 }
 
 .span-logo {
@@ -108,6 +110,10 @@ ul {
     gap: 24px;
     margin-right: 80px;
     align-items: center;
+}
+
+.header-list-link {
+    padding: 32px 0;
 }
 .header-item {
     font-weight: 500;
@@ -135,13 +141,30 @@ ul {
     padding: 8px;
     width: 40px;
     height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 8px; */
+}
+
+.nav-list-icon {
+    padding: 8px;
+}
+
+.nav-svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
 }
 /* #endregion Header */
 
 /* #region Hero */
 
 .hero {
-    padding: 0 16px 80px;
+    padding: 0 0 80px 0;
 }
 
 .hero .container {
@@ -151,6 +174,10 @@ ul {
     width: 1168px;
     flex-direction: column;
     margin: 0 auto;
+
+    background-image: url(../images/bg-overlay.png), url(../images/hero-bg.jpg);
+    background-size: cover;
+    background-position: ;
 }
 
 .hero-title {
@@ -218,10 +245,28 @@ ul {
     margin-left: auto;
     align-items: center;
 }
-.hero-link:hover,
-.hero-link:focus {
+
+.circle {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-down:hover,
+.link-down:focus {
     color: #fd9222;
 }
+
+.link-down:focus,
+.link-down:hover + .circle {
+    fill: #fff;
+    background-color: #fd9222;
+}
+
 .hero-link-icon {
     display: block;
     align-items: center;
@@ -245,6 +290,7 @@ ul {
 }
 .benefits-item {
     max-width: 308px;
+    position: relative;
 }
 .benefits-sub {
     font-weight: 600;
@@ -258,6 +304,37 @@ ul {
     line-height: 1.28;
     letter-spacing: -0.02em;
     color: rgba(255, 255, 255, 0.7);
+}
+
+.circl-ben {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    background-color: transparent;
+    width: 62px;
+    height: 62px;
+    margin-bottom: 22px;
+}
+
+.svg-ben {
+    fill: #fd9222;
+    stroke: #fd9222;
+}
+
+.benefits-item::after {
+}
+
+.benefits-item:not(:last-child)::after {
+    content: '';
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    width: 124px;
+    height: 0px;
+    position: absolute;
+    transform: rotate(90deg);
+    top: 50%;
+    left: 95%;
 }
 /* #endregion Benefits */
 
@@ -297,6 +374,7 @@ ul {
     flex-direction: column;
     align-items: center;
     padding: 28px 23px;
+    position: relative;
 }
 
 .ingradients-item img {
@@ -307,18 +385,21 @@ ul {
     background-color: #fff;
     color: orange;
     border-color: currentColor;
+    stroke: currentColor;
 }
 
 .ingradients-item:nth-child(4n + 1) {
     background-color: orange;
     border-color: orange;
     color: #fff;
+    stroke: currentColor;
 }
 
 .ingradients-item:nth-child(4n + 3) {
     background-color: #1e1823;
     border-color: currentColor;
     color: #fff;
+    stroke: currentColor;
 }
 
 .ingradients-h {
@@ -329,4 +410,99 @@ ul {
     text-transform: uppercase;
     margin-right: auto;
 }
+
+.arrow-ingradient {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+}
+.arrow-circle {
+    border: 1px solid;
+
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+}
+.arr {
+}
 /* #endregion Ingradients */
+
+/* #region Make */
+.how-make {
+    padding-bottom: 120px;
+}
+
+.how-make .container {
+    flex-direction: column;
+    align-items: center;
+}
+.made-list {
+    display: flex;
+    gap: 20px;
+}
+
+.made-list {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    width: 44px;
+    height: 44px;
+    border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100%;
+    border: 1px solid #ffff;
+    fill: #fafafa;
+}
+.play-svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-made {
+    border-radius: 15px;
+    background: #fff;
+    padding: 32px;
+    max-height: 400px;
+}
+.make-h {
+    display: flex;
+    margin-bottom: 28px;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.33;
+    color: #111;
+}
+.process-list li {
+    margin-bottom: 24px;
+
+    font-size: 14px;
+    line-height: 1.28;
+    letter-spacing: -0.02em;
+    color: #111;
+}
+
+.circle-list {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background-color: #4c4c4c;
+    display: inline-block;
+    margin-right: 8px;
+}
+/* #endregion Make */
